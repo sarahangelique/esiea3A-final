@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.esiea3a.R
 
-class PokemonAdapter(private val dataSet: List<String>) :
+class PokemonAdapter(private var dataSet: List<String>) :
     RecyclerView.Adapter<PokemonAdapter.ViewHolder>() {
 
     /**

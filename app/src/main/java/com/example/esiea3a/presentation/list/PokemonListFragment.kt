@@ -49,8 +49,14 @@ class PokemonListFragment : Fragment() {
             adapter = adapter
         }
 
-        recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = adapter
+        val pokeList : ArrayList<String> = arrayListOf<String>().apply {
+            add("Pikachu")
+            add("Salameche")
+            add("Carapuce")
+            add("Herbizarre")
+        }
+
+        adapter.updateList(pokeList)
     }
 }
 
