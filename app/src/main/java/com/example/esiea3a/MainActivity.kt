@@ -30,12 +30,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                .setAction("Action", null).show()
         }
 
-
-        val dailyNews : News = News("bts butter out!!")
-        /*var dailyNews2 : News("ariana grande got secretly married!!")*/
+        //val dailyNews : News = News("bts butter out!!")
+        //var dailyNews2 : News("ariana grande got secretly married!!")
 
 
 
@@ -63,4 +62,4 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
-}
+ }
