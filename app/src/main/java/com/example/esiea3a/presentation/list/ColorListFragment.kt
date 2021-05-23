@@ -1,13 +1,15 @@
 package com.example.esiea3a.presentation.list
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.esiea3a.R
+import retrofit2.Retrofit
+
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -38,6 +40,14 @@ class ColorListFragment : Fragment() {
             layoutManager = this@ColorListFragment.layoutManager
             adapter = this@ColorListFragment.adapter
         }
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://pokeapi.co/api/v2")
+            .build()
+
+        val ColorApi: ColorApi = retrofit.create(ColorApi::class.java)
+
+
 
         val colorList : ArrayList<Color> = arrayListOf<Color>().apply {
             add(Color("Red"))
